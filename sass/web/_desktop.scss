@@ -1,0 +1,165 @@
+
+// Debug
+body {
+    &::before {
+        display: none;
+        background-color: green;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 140px;
+        color: white;
+        opacity: .7;
+        content: 'mobile';
+        padding: 2px 5px;
+        pointer-events: none;
+    }
+}
+
+
+
+
+
+/* ############################################################################ 
+####################################  ALL  #################################### 
+############################################################################### */
+@media (min-width: $device-medium) {
+    body {
+        //h1 { font-size: 2em; }
+        h2.subtitle { font-size: 1.3em; }
+
+        &#home {
+            main {
+                section {
+                    &#principios { > img { width: 400px;} }
+                    &#visitaGaleria {
+                        > .imgBlock { 
+                            width: 500px;
+                            margin: auto;
+                         }
+                    }
+                }
+            }
+        }
+
+        > #mainHeader {
+
+            #toggle-mainMenu, #toggle-profileMenu {
+                aspect-ratio: 2/1;
+            }
+            #toggle-mainMenu {
+                &::after {
+                    display: inline-block;
+                    content: 'Menu';
+                    color: white;
+                    font-size: 2em;
+                    margin-left: 0.5em;
+                }
+            }
+            #toggle-profileMenu {
+                &::before {
+                    display: inline-block;
+                    content: 'Perfil';
+                    color: white;
+                    font-size: 2em;
+                    margin-right: 0.5em;
+                }
+            }
+        }
+
+        footer {
+            height: 70px;
+            nav.social {
+                > a {
+                    transition: transform .2s;
+                    &:hover { transform: scale(1.1);}
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+
+
+/* ############################################################################ 
+###################################  MEDIUM  ################################## 
+############################################################################### */
+@media (min-width: $device-medium) and (max-width: calc($device-large - 1px)) {
+    .formUser {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    article {
+        &.block, &.clean, &.script {
+            padding: .2em 4%;
+        }
+    }
+
+    body {
+        &::before { content: 'desktop-medium'; } // Debug
+
+        &#home {
+            main {
+                section {
+                    &#slideshow { height: 500px; }
+                }
+            }
+        }
+
+        footer {
+            padding: 0 6%;
+        }
+    }
+}
+
+
+
+
+
+/* ############################################################################ 
+####################################  LARGE  ################################## 
+############################################################################### */
+@media (min-width: $device-large) {
+    .formUser {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+
+    article {
+        &.block, &.clean, &.script {
+            padding: .2em 6%;
+        }
+    }
+
+
+    body {
+        &::before { content: 'desktop-large'; } // Debug
+
+        &#home {
+            main {
+                section {
+                    &#slideshow { height: 600px; }
+                    
+                    &#visitaGaleria {
+                        > .imgBlock { 
+                            width: 500px;
+                            margin: auto;
+                         }
+                    }
+                }
+            }
+        }
+
+
+
+        footer {
+            padding: 0 14%;
+        }
+    }
+}
+
+  

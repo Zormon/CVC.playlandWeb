@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Playland Icons';
+    src: url(/css/web/plIcons.woff2) format('woff2');
+  }
+
+i[class^="icon-"], .icon-prefix {
+    &::before {
+        font-family: 'Playland Icons';
+        font-style: normal;
+    }
+}
+
+// Icon list
+.icon-menu:before         { content: '\E000'; }
+.icon-mail:before         { content: '\E001'; }
+.icon-facebook:before     { content: '\E002'; }
+.icon-instagram:before    { content: '\E003'; }
+.icon-youtube:before      { content: '\E004'; }
+.icon-tiktok:before       { content: '\E005'; }
+.icon-star:before         { content: '\E006'; }
+.icon-tiempo:before       { content: '\E007'; }
+.icon-deporte:before      { content: '\E008'; }
+.icon-diversion:before    { content: '\E009'; }
+.icon-familia:before      { content: '\E00A'; }
+.icon-companeros:before   { content: '\E00B'; }
+.icon-salud:before        { content: '\E00C'; }
+.icon-perfil:before       { content: '\E00D'; }
+.icon-lugar:before        { content: '\E00E'; }
+.icon-fecha:before        { content: '\E00F'; }

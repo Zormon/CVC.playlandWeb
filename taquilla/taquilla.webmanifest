@@ -1,0 +1,14 @@
+{
+    "name": "PlaylandGC taquilla",
+    "short_name": "PLtaquilla",
+    "start_url": "https://playlandgrancanaria.com/taquilla/",
+    "display": "fullscreen",
+    "background_color": "#ff761b",
+    "theme_color": "#ff761b",
+    "description": "Panel de taquilla de Playland GC",
+    "icons": [{
+      "src": "/taquilla/appicon.png?2",
+      "type": "image/png",
+      "sizes": "256x256"
+    }]
+}

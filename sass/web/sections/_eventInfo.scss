@@ -1,0 +1,61 @@
+@use "sass:color";
+
+.eventInfo {
+    display: grid;
+    gap: 1em;
+    padding: 1em;
+
+    grid-template: 
+        "img" auto
+        "act" auto
+        "dat" auto 
+        "gal" auto 
+        "inf" auto 
+        "map" 16em;
+
+
+    /*@media (min-width: $device-medium) and (max-width: calc($device-large - 1px)) { }  MEDIUM*/
+    @media (min-width: $device-medium) {
+        grid-template: 
+            "img dat" auto
+            "img act" auto
+            "img map" 2fr
+            "gal gal"
+            "inf inf" auto 
+            / 1fr 1fr;
+    }
+
+    &.red       { background-color: color.scale($color-red, $lightness: 38%);       border-color: $color-red; }
+    &.blue      { background-color: color.scale($color-blue, $lightness: 38%);      border-color: $color-blue; }
+    &.pink      { background-color: color.scale($color-pink, $lightness: 38%);      border-color: $color-pink; }
+    &.green     { background-color: color.scale($color-green, $lightness: 38%);     border-color: $color-green; }
+    &.yellow    { background-color: color.scale($color-yellow, $lightness: 38%);    border-color: $color-yellow; }
+    &.orange    { background-color: color.scale($color-orange, $lightness: 38%);    border-color: $color-orange; }
+
+    > #imgPoster    { grid-area: img }
+    > #evAction     { grid-area: act }
+    > #evGallery    { grid-area: gal }
+    > #data         { grid-area: dat }
+    > #info         { grid-area: inf }
+    > #map          { grid-area: map }
+
+    #imgPoster {
+        width: 100%;
+        justify-self: center;
+        max-width: 700px;
+        @media (min-width: $device-large) { width: 80%; }
+    }
+
+    #data {
+        border-radius: 10px;
+        border-width: 2px;
+        border-style: solid;
+        padding: 0 1em;
+    }
+    
+    > #map > iframe {
+        border: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

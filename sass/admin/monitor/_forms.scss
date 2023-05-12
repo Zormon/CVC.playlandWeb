@@ -1,0 +1,40 @@
+input.txt, .btn {
+    font-size: 5vw;
+    background-color: #fff;
+    border: 0;
+    padding: 1vh 10vw;
+    border-radius: 5vw;
+    box-shadow: $low-shadow;
+
+    &::placeholder {
+        color: #888;
+        font-family: main;
+    }
+
+
+    &.wide { 
+        padding: 1vh 20vw;
+     }
+}
+
+input.txt {
+    &:focus {
+        border-color: #888;
+        box-shadow: $medium-shadow;
+    }
+}
+
+.btn {
+    transform-origin: bottom center;
+    font-family: secondary;
+    text-align: center;
+
+    &.feedback {
+        &:hover {
+            transform: scale(.9);
+            filter: brightness(110%) contrast(110%) saturate(110%);
+            box-shadow: $medium-shadow;
+        }
+    }
+    
+}

@@ -1,0 +1,7 @@
+config.ini
+.notes
+.test
+.vscode
+/video/**/*.mp4
+/video/**/*.webm
+/img/**/*.webp

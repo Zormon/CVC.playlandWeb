@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.gif|\.zip|\.css|\.svg|\.js|\.webp|\.woff2|\.webmanifest|\.map|\.mp4|\.webm|\.opus)$
+RewriteRule (.*) boot.php [QSA,L]

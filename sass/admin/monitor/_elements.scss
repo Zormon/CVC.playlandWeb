@@ -1,0 +1,152 @@
+.tecladoNum {
+    display: grid;
+    grid-template-areas:    "bx bb bb"
+                            "b7 b8 b9"
+                            "b4 b5 b6"
+                            "b1 b2 b3"
+                            "b0 b0 b0";
+    gap: 3vw;
+    background-color: #eeeec0;
+    padding: 2vw 6vw;
+    border-radius: 6vw;
+
+    > button {
+        font-size: 6vw;
+        font-weight: bold;
+        border-radius: 6vw;
+        line-height: 0;
+        color: #333;
+        padding: 6vw 10vw;
+
+        &[data-key="7"] { grid-area: b7 }
+        &[data-key="8"] { grid-area: b8 }
+        &[data-key="9"] { grid-area: b9 }
+        &[data-key="4"] { grid-area: b4 }
+        &[data-key="5"] { grid-area: b5 }
+        &[data-key="6"] { grid-area: b6 }
+        &[data-key="1"] { grid-area: b1 }
+        &[data-key="2"] { grid-area: b2 }
+        &[data-key="3"] { grid-area: b3 }
+        &[data-key="0"] { grid-area: b0 }
+        &[data-key="-b"] { grid-area: bb }
+        &[data-key="-x"] { grid-area: bx }
+    }
+
+    > button, > button:hover, button:hover { 
+        box-shadow: none;
+    }
+}
+
+.prueba {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    align-items: center;
+
+    > h1, > h2 {
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 3vw;
+    }
+
+    > h1 {
+        flex-basis: 6vh;
+        font-size: 6vw;
+        background-color: #346c15;
+    }
+
+    > h2 {
+        flex-basis: 5vh;
+        font-size: 5vw;
+        padding: 2vw;
+        background-color: #4e9726;
+    }
+
+    .controls {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10vh 0;
+    }
+
+    > .actions {
+        flex-basis: 8vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        button {
+            border: 0;
+            font-size: 5.5vw;
+            color: white;
+            flex-grow: 1;
+
+            &.red { background-color: #f02929; }
+            &.green { background-color: #218c03; }
+
+            &:disabled { opacity: .4; }
+
+            &:hover {
+                filter: brightness(120%) contrast(120%);
+            }
+        }
+    }
+
+    &.puntos {
+        > .controls {
+            background-color: #ffffc5;
+            border-width: 4vw 1vw;
+            border-style: solid;
+            border-color: white;
+
+            > button { 
+                font-size: 7vw;
+                border: 2px solid transparent;
+                width: 16vw;
+                height: 14vh;
+                transition: filter .5s;
+                
+
+                &[data-op="-5"] { border-color: #2294ff;    background-color: #5fb2ff; }
+                &[data-op="-1"] { border-color: #22c0ff;    background-color: #73d7ff; }
+                &[data-op="1"] { border-color: #ffaa22;     background-color: #ffcb77; }
+                &[data-op="5"] { border-color: #ff7a22;     background-color: #ffb07c; }
+
+                &:hover {
+                    transition: none;
+                    filter: brightness(120%) contrast(120%);
+                }
+            }
+
+            > #resultado {
+                background: none;
+                width: 28vw;
+                -moz-appearance: textfield;
+                font-size: 12vw;
+                border: 0;
+                text-align: center;
+                &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+            }
+        }
+    }
+
+    &.tiempo {
+        .controls {
+            flex-direction: column;
+
+            #resultado {
+                border: 0;
+                font-size: 14vw;
+                width: 90%;
+                text-align: center;
+                margin: 10vh 0;
+                gap: 8vh;
+            }
+        }
+    }
+}

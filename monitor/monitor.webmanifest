@@ -1,0 +1,14 @@
+{
+    "name": "PlaylandGC monitor",
+    "short_name": "PLmonitor",
+    "start_url": "https://playlandgrancanaria.com/monitor/",
+    "display": "fullscreen",
+    "background_color": "#eb497d",
+    "theme_color": "#eb497d",
+    "description": "Panel de monitor de Playland GC",
+    "icons": [{
+      "src": "/monitor/appicon.png?2",
+      "type": "image/png",
+      "sizes": "256x256"
+    }]
+}

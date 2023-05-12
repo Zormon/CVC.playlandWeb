@@ -1,0 +1,79 @@
+.txt, .btn, label { font-size: 1em; }
+
+.txt, .btn {
+    background-color: #fff;
+    border: 0;
+    border-radius: 100vw;
+    
+    padding: 1em 1.8em;
+    
+    &::placeholder { color: #888; font-family: main;}
+    
+    &.big { font-size: 1.5em; padding: 0.8em 1.8em;}
+}
+
+.txt {
+    border: 2px solid #bbb;
+    &:focus {
+        border-color: #888;
+        box-shadow: 0px 8px 10px 2px rgba(0,0,0,.1);
+    }
+}
+
+.grid .txt {
+    width: 100%;
+}
+
+.btn {
+    font-family: secondary;
+    text-align: center;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,.1);
+    transform-origin: center;
+
+    &:not(.no-feedback):hover { 
+        filter: brightness(120%);
+        transform: scale(.9);
+        box-shadow: none;
+     }
+}
+
+#alertHeader, #modalHeader, #modalButtons {
+        font-size: 2em;
+}
+
+.choices {
+    font-size: 1.3em;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100vw;
+    border: 2px solid #bbb;
+}
+
+input[type="radio"] { 
+    display: none; 
+
+    & + label {
+        padding: 0.8em 1.7em;
+        border: 2px solid #bbb;
+        border-radius: 100vw;
+        display: inline-block;
+        margin: 0 .5em 0 0;
+    }
+
+    &:checked + label {
+        background-color: #edef90;
+        border-color: #c0c333;
+    }
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+    user-select: text;
+}
+
+
+select {
+    option {
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+}

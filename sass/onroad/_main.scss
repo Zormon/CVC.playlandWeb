@@ -1,0 +1,44 @@
+.showCode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* ============================================================
+=========================== BEACONS ===========================
+============================================================ */
+
+body#beacon {
+    text-align: center;
+
+    #beaconInfo {
+        video { max-width: 100%; }
+    }
+
+    #beaconPin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-yellow-light;
+        margin: 0 1em;
+
+        > h2 { margin: 0; }
+
+        #beaconForm {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            > input[name="code"] { font-size: 1.5em; }
+        }
+    }
+    
+    #nextBC {
+        display: block;
+        font-size: 4em;
+        font-weight: bold;
+    }
+}
+

@@ -1,0 +1,210 @@
+
+/* ====================================
+===========  SASS VARIABLES ===========
+===================================== */
+
+@use "sass:color";
+
+$color-cyan: #6cc5b9;
+$color-pink: #ff2798;
+$color-purple: #7a5dbf;
+$color-green: #7bc702;
+$color-blue: #0090e3;
+$color-yellow: #eec81f;
+$color-red: #fd1521;
+$color-orange: #ff8410;
+
+$color-cyan-light: color.scale($color-cyan, $lightness: 70%);
+$color-pink-light: color.scale($color-pink, $lightness: 70%);
+$color-purple-light: color.scale($color-purple, $lightness: 70%);
+$color-green-light: color.scale($color-green, $lightness: 70%);
+$color-blue-light: color.scale($color-blue, $lightness: 70%);
+$color-yellow-light: color.scale($color-yellow, $lightness: 70%);
+$color-red-light: color.scale($color-red, $lightness: 70%);
+$color-orange-light: color.scale($color-orange, $lightness: 70%);
+$color-cyan-light: color.scale($color-cyan, $lightness: 70%);
+
+$color-cyan-dark: color.scale($color-cyan, $lightness: -55%);
+$color-pink-dark: color.scale($color-pink, $lightness: -55%);
+$color-purple-dark: color.scale($color-purple, $lightness: -55%);
+$color-green-dark: color.scale($color-green, $lightness: -55%);
+$color-blue-dark: color.scale($color-blue, $lightness: -55%);
+$color-yellow-dark: color.scale($color-yellow, $lightness: -55%);
+$color-red-dark: color.scale($color-red, $lightness: -55%);
+$color-orange-dark: color.scale($color-orange, $lightness: -55%);
+
+
+
+$gradient1: linear-gradient(45deg, #594dd5, #f244bd);
+$gradient2: linear-gradient(to right, #dd3e54, #6be585);
+$gradient3: linear-gradient(to right, #8360c3, #2ebf91);
+$gradient4: linear-gradient(to right, #8E2DE2, #4A00E0);
+$gradient5: linear-gradient(to right, #a17fe0, #6be585, #5D26C1);
+$gradient6: linear-gradient(to right, #108dc7, #ef8e38);
+
+
+$low-shadow: 0px 4px 4px 0px rgba(0,0,0,.1);
+$medium-shadow: 0 3px 6px rgba(0,0,0,.16);
+
+
+$device-medium: 768px;
+$device-large: 1200px;
+
+
+
+/* ====================================
+==============  HELPERS ==============
+===================================== */
+
+// Colors
+.CLRcyan            { color: $color-cyan; }
+.CLRpink            { color: $color-pink; }
+.CLRpurple          { color: $color-purple; }
+.CLRgreen           { color: $color-green; }
+.CLRblue            { color: $color-blue; }
+.CLRyellow          { color: $color-yellow; }
+.CLRred             { color: $color-red; }
+.CLRorange          { color: $color-orange; }
+.CLRyellow          { color: $color-yellow; }
+
+.CLRyellow-dark     { color: $color-yellow-dark; }
+
+// Backgrounds
+.BGcyan            { background-color: $color-cyan; }
+.BGpink            { background-color: $color-pink; }
+.BGpurple          { background-color: $color-purple; }
+.BGgreen           { background-color: $color-green; }
+.BGblue            { background-color: $color-blue; }
+.BGyellow          { background-color: $color-yellow; }
+.BGred             { background-color: $color-red; }
+.BGorange          { background-color: $color-orange; }
+
+.BGcyan-light       { background-color: $color-cyan-light; }
+.BGpink-light       { background-color: $color-pink-light; }
+.BGpurple-light     { background-color: $color-purple-light; }
+.BGgreen-light      { background-color: $color-green-light; }
+.BGblue-light       { background-color: $color-blue-light; }
+.BGyellow-light     { background-color: $color-yellow-light; }
+.BGred-light        { background-color: $color-red-light; }
+.BGorange-light     { background-color: $color-orange-light; }
+
+.BGcyan-dark       { background-color: $color-cyan-dark; }
+.BGpink-dark       { background-color: $color-pink-dark; }
+.BGpurple-dark     { background-color: $color-purple-dark; }
+.BGgreen-dark      { background-color: $color-green-dark; }
+.BGblue-dark       { background-color: $color-blue-dark; }
+.BGyellow-dark     { background-color: $color-yellow-dark; }
+.BGred-dark        { background-color: $color-red-dark; }
+.BGorange-dark     { background-color: $color-orange-dark; }
+
+// Texto
+.TXTcyan            { color: $color-cyan; }
+.TXTpink            { color: $color-pink; }
+.TXTpurple          { color: $color-purple; }
+.TXTgreen           { color: $color-green; }
+.TXTblue            { color: $color-blue; }
+.TXTyellow          { color: $color-yellow; }
+.TXTred             { color: $color-red; }
+.TXTorange          { color: $color-orange; }
+.TXTyellow          { color: $color-yellow; }
+
+.TXTcyan-dark       { color: $color-cyan-dark; }
+.TXTpink-dark       { color: $color-pink-dark; }
+.TXTpurple-dark     { color: $color-purple-dark; }
+.TXTgreen-dark      { color: $color-green-dark; }
+.TXTblue-dark       { color: $color-blue-dark; }
+.TXTyellow-dark     { color: $color-yellow-dark; }
+.TXTred-dark        { color: $color-red-dark; }
+.TXTorange-dark     { color: $color-orange-dark; }
+.TXTyellow-dark     { color: $color-yellow-dark; }
+
+
+// Fills
+[class*="FILL"]  { color: transparent; }
+.FILLcyan        { text-shadow: 0 0 0 $color-cyan !important; }
+.FILLpink        { text-shadow: 0 0 0 $color-pink !important; }
+.FILLpurple      { text-shadow: 0 0 0 $color-purple !important; }
+.FILLgreen       { text-shadow: 0 0 0 $color-green !important; }
+.FILLblue        { text-shadow: 0 0 0 $color-blue !important; }
+.FILLyellow      { text-shadow: 0 0 0 $color-yellow !important; }
+.FILLred         { text-shadow: 0 0 0 $color-red !important; }
+.FILLorange      { text-shadow: 0 0 0 $color-orange !important; }
+
+
+// Bordes
+.BRDcyan        { border-color: $color-cyan !important;}
+.BRDpink        { border-color: $color-pink !important;}
+.BRDpurple      { border-color: $color-purple !important;}
+.BRDgreen       { border-color: $color-green !important;}
+.BRDblue        { border-color: $color-blue !important;}
+.BRDyellow      { border-color: $color-yellow !important;}
+.BRDred         { border-color: $color-red !important;}
+.BRDorange      { border-color: $color-orange !important;}
+
+
+[class*="BGgrd"] { color: white; }
+.BGgrd1 { background-image: $gradient1; }
+.BGgrd2 { background-image: $gradient2; }
+.BGgrd3 { background-image: $gradient3; }
+.BGgrd4 { background-image: $gradient4; }
+.BGgrd5 { background-image: $gradient5; }
+.BGgrd6 { background-image: $gradient6; }
+
+
+
+ul.checkList {
+    list-style: none;
+
+    li {
+        position: relative;
+        margin-bottom: .5em;
+        
+
+        &::before {
+            content: "✔️ ";
+            color: transparent;
+            text-shadow: 0 0 0 $color-orange;
+        }
+    }
+}
+
+// Fits
+.center { text-align: center; }
+img.fit-width { 
+    display: block;
+    margin: auto;
+    max-width: 100%;
+ }
+
+
+.tiny      { font-size: .5em; }
+.small     { font-size: .8em; }
+.big       { font-size: 2em; }
+.huge      { font-size: 4em; }
+.noHeight  { line-height: 0; }
+
+
+
+.nodisplay  { display: none; }
+.hidden     { visibility: hidden; }
+
+.screen {
+    &:not(.active) { display: none; }
+}
+
+.emoji {
+    color: transparent;
+    &.white { text-shadow: 0 0 0 white; }
+    &.red { text-shadow: 0 0 0 $color-red; }
+    &.green { text-shadow: 0 0 0 $color-green; }
+    &.pink { text-shadow: 0 0 0 $color-pink; }
+    &.purple { text-shadow: 0 0 0 $color-purple; }
+    &.yellow { text-shadow: 0 0 0 $color-yellow; }
+    &.orange { text-shadow: 0 0 0 $color-orange; }
+}
+
+
+@keyframes zoom-bouncing-in {
+    from { transform: scale(1); }
+    to   { transform: scale(1.2); }
+}

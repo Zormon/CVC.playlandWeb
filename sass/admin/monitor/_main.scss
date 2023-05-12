@@ -1,0 +1,248 @@
+* {
+    font-family: main;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+a {
+    color: unset;
+    font-size: unset;
+    text-decoration: unset;
+}
+
+// Body Flex Areas
+body {
+    width: 100vw; height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #ecf4ff;
+    
+
+
+    &.app {
+        > header { 
+            font-size: 4vw;
+            padding: 2vw;
+            flex-basis: 8vh;
+            background-color: #fff;
+            box-shadow: 0px 10px 20px 6px rgba(0,0,0,.1);
+            z-index: 5;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            button { aspect-ratio: 1/1; }
+
+            button, select {
+                height: 100%;
+                text-align: center;
+                font-size: 1em;
+                border-width: 3px;
+                border-style: solid;
+                border-color: transparent;
+                border-radius: .5em;
+                background: unset;
+            }
+
+            select#prueba {
+                appearance: none;
+                padding: 0 1em;
+
+                option { font-size: .5em; }
+            }
+
+            #backStart { border-color: $color-orange; }
+            #prueba { border-color: $color-green; }
+            #logout { border-color: $color-purple; }
+
+            > p {
+                margin: 0;
+                font-size: 4vw;
+            }
+        }
+        > main  { 
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1vh 0;
+
+        }
+        > footer { 
+            text-align: center;
+            flex-basis: 8vh;
+            background-color: #016eac;
+            color: #fff;
+            clip-path: ellipse(55% 100% at center 120%);
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            padding-bottom: 1vh;
+        }
+
+        hr.colorLines { z-index: 9;}
+
+        &.start {
+           > main {
+                > form {
+                    flex-grow: 3;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    input#dorsal {
+                        border-radius: 0;
+                        width: 100vw;
+                        font-size: 10vw;
+                        padding: 3vh 5vw;
+                        line-height: 0;
+                    }
+                }
+
+                div#teclado {
+                    flex-grow: 3;
+                }
+
+                div#qrContainer {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    display: none;
+                    background: rgba(0,0,0,.5);
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 4;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    #qrVideo {
+                        max-height: 60%;
+                        width: 90%;
+                        margin: 1em;
+                    }
+                }
+           }
+        }
+
+        &.qr {
+            #qrVideo {
+                width: 90%;
+                aspect-ratio: 1;
+                object-fit: cover;
+                border: 1vw solid #016eac;
+                border-radius: 4vw;
+            }
+        }
+
+        &.equipos {
+            > header { 
+                h1 { color: #c87101;  }
+            }
+            > main {
+                div.lista {
+                    width: 90%;
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: stretch;
+                    gap: 5vh;
+
+                    .btn {
+                        position: relative;
+                        padding: 1vh 2vw;
+                        font-family: secondary;
+                        color: white;
+
+                        &.sin-intentos, &.sin-pago {
+                            color: #444;
+                            background-color: #eee;
+
+                            &:hover {
+                                transform: unset;
+                                filter: unset;
+                            }
+
+                            &:before {
+                                display: block;
+                                position: absolute;
+                                left: 26%;
+                                bottom: -24%;
+                                width: 50%;
+                                text-align: center;
+                             }
+                        }
+
+                        &.sin-intentos {
+                            border-color: #aaa;
+                            &:before {
+                                content: "Sin intentos";
+                                background: #aaa;
+                            }
+                        }
+
+                        &.sin-pago {
+                            border-color: #aaa;
+                            &:before {
+                                content: "No pagado";
+                                background: #aaa;
+                            }
+
+                            
+                        }
+
+                        p {
+                            margin: 1vh 0;
+                            &:first-child { 
+                                text-transform: uppercase;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &.login {
+        background-color: #f8f9fd;
+        > header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 20vh;
+
+            img.logo { 
+                width: 50vw;
+                display: block;
+            }
+        }
+
+        > main {
+            flex-basis: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            > form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                flex-basis: 30vh;
+                width: 60vw;
+                input { width: 100%; }
+            }
+        }
+    }
+}
+
+
