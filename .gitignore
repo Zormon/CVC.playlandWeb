@@ -5,3 +5,4 @@ config.ini
 /video/**/*.mp4
 /video/**/*.webm
 /img/**/*.webp
+/img/**/*.jpg
